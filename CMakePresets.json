@@ -1,0 +1,232 @@
+{
+    "version": 10,
+    "configurePresets": [
+        {
+            "name": "base",
+            "binaryDir": "${sourceDir}/build/${presetName}",
+            "installDir": "${sourceDir}/build/install/${presetName}",
+            "generator": "Ninja",
+            "hidden": true,
+            "cacheVariables": {
+                "CMAKE_CXX_STANDARD": "17",
+                "CMAKE_CXX_STANDARD_REQUIRED": true,
+                "CMAKE_CXX_EXTENSIONS": false,
+                "CMAKE_EXPORT_COMPILE_COMMANDS": true,
+                "CMAKE_TOOLCHAIN_FILE": "${env:VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake",
+                "CMAKE_MAKE_PROGRAM": "ninja"
+            }
+        },
+        {
+            "name": "debug",
+            "displayName": "Debug",
+            "inherits": [
+                "base"
+            ],
+            "hidden": true,
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug"
+            }
+        },
+        {
+            "name": "release",
+            "displayName": "Release",
+            "inherits": [
+                "base"
+            ],
+            "hidden": true,
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release"
+            }
+        },
+        {
+            "name": "relwithdebinfo",
+            "displayName": "RelWithDebInfo",
+            "inherits": [
+                "base"
+            ],
+            "hidden": true,
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "RelWithDebInfo"
+            }
+        },
+        {
+            "name": "linux-base",
+            "hidden": true,
+            "cacheVariables": {
+                "CMAKE_C_COMPILER": "clang",
+                "CMAKE_CXX_COMPILER": "clang++"
+            },
+            "condition": {
+                "type": "equals",
+                "lhs": "${hostSystemName}",
+                "rhs": "Linux"
+            }
+        },
+        {
+            "name": "macos-base",
+            "hidden": true,
+            "cacheVariables": {
+                "CMAKE_C_COMPILER": "clang",
+                "CMAKE_CXX_COMPILER": "clang++"
+            },
+            "condition": {
+                "type": "equals",
+                "lhs": "${hostSystemName}",
+                "rhs": "Darwin"
+            }
+        },
+        {
+            "name": "win-base",
+            "hidden": true,
+            "cacheVariables": {
+                "CMAKE_C_COMPILER": "${env:CLANG_BIN_DIR}/clang-cl.exe",
+                "CMAKE_CXX_COMPILER": "${env:CLANG_BIN_DIR}/clang-cl.exe"
+            },
+            "condition": {
+                "type": "equals",
+                "lhs": "${hostSystemName}",
+                "rhs": "Windows"
+            },
+            "inherits": [
+                "base"
+            ]
+        },
+        {
+            "name": "win-debug",
+            "displayName": "Windows Debug",
+            "inherits": [
+                "win-base",
+                "debug"
+            ],
+            "hidden": false
+        },
+        {
+            "name": "win-release",
+            "displayName": "Windows Release",
+            "inherits": [
+                "win-base",
+                "release"
+            ],
+            "hidden": false
+        },
+        {
+            "name": "win-relwithdebinfo",
+            "displayName": "Windows RelWithDebInfo",
+            "inherits": [
+                "win-base",
+                "relwithdebinfo"
+            ],
+            "hidden": false
+        },
+        {
+            "name": "mac-debug",
+            "displayName": "MacOS Debug",
+            "inherits": [
+                "macos-base",
+                "debug"
+            ],
+            "hidden": false
+        },
+        {
+            "name": "mac-release",
+            "displayName": "MacOS Release",
+            "inherits": [
+                "macos-base",
+                "release"
+            ],
+            "hidden": false
+        },
+        {
+            "name": "mac-relwithdebinfo",
+            "displayName": "MacOS RelWithDebInfo",
+            "inherits": [
+                "macos-base",
+                "relwithdebinfo"
+            ],
+            "hidden": false
+        },
+        {
+            "name": "linux-debug",
+            "displayName": "Linux Debug",
+            "inherits": [
+                "linux-base",
+                "debug"
+            ],
+            "hidden": false
+        },
+        {
+            "name": "linux-release",
+            "displayName": "Linux Release",
+            "inherits": [
+                "linux-base",
+                "release"
+            ],
+            "hidden": false
+        },
+        {
+            "name": "linux-relwithdebinfo",
+            "displayName": "Linux RelWithDebInfo",
+            "inherits": [
+                "linux-base",
+                "relwithdebinfo"
+            ],
+            "hidden": false
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "win-debug",
+            "displayName": "Windows Debug",
+            "configurePreset": "win-debug",
+            "jobs": 0
+        },
+        {
+            "name": "win-release",
+            "displayName": "Windows Release",
+            "configurePreset": "win-release",
+            "jobs": 0
+        },
+        {
+            "name": "win-relwithdebinfo",
+            "displayName": "Windows RelWithDebInfo",
+            "configurePreset": "win-relwithdebinfo",
+            "jobs": 0
+        },
+        {
+            "name": "mac-debug",
+            "displayName": "MacOS Debug",
+            "configurePreset": "mac-debug",
+            "jobs": 0
+        },
+        {
+            "name": "mac-release",
+            "displayName": "MacOS Release",
+            "configurePreset": "mac-release",
+            "jobs": 0
+        },
+        {
+            "name": "mac-relwithdebinfo",
+            "displayName": "MacOS RelWithDebInfo",
+            "configurePreset": "mac-relwithdebinfo",
+            "jobs": 0
+        },
+        {
+            "name": "linux-debug",
+            "displayName": "Linux Debug",
+            "configurePreset": "linux-debug",
+            "jobs": 0
+        },
+        {
+            "name": "linux-release",
+            "displayName": "Linux Release",
+            "configurePreset": "linux-release",
+            "jobs": 0
+        },
+        {
+            "name": "linux-relwithdebinfo",
+            "displayName": "Linux RelWithDebInfo",
+            "configurePreset": "linux-relwithdebinfo",
+            "jobs": 0
+        }
+    ]
+}

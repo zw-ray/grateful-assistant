@@ -1,0 +1,40 @@
+<RCC>
+    <qresource prefix="/db">
+        <file alias="cities_code.db">db/cities_code.db</file>
+    </qresource>
+    <qresource prefix="/fonts">
+        <file alias="SauceCodeProNerdFontMono-Regular.ttf">fonts/SauceCodeProNerdFontMono-Regular.ttf</file>
+        <file alias="SauceCodeProNerdFontPropo-Regular.ttf">fonts/SauceCodeProNerdFontPropo-Regular.ttf</file>
+        <file alias="SauceCodeProNerdFont-Regular.ttf">fonts/SauceCodeProNerdFont-Regular.ttf</file>
+    </qresource>
+    <qresource prefix="/icons">
+        <file alias="weather/cloudy_fog.svg">icons/weather/cloudy_fog.svg</file>
+        <file alias="weather/cloudy.svg">icons/weather/cloudy.svg</file>
+        <file alias="weather/co2_pollution.svg">icons/weather/co2_pollution.svg</file>
+        <file alias="weather/fog.svg">icons/weather/fog.svg</file>
+        <file alias="weather/high_temperature_hot.svg">icons/weather/high_temperature_hot.svg</file>
+        <file alias="weather/large_rain.svg">icons/weather/large_rain.svg</file>
+        <file alias="weather/lightning.svg">icons/weather/lightning.svg</file>
+        <file alias="weather/little_rain.svg">icons/weather/little_rain.svg</file>
+        <file alias="weather/low_temperature_cold.svg">icons/weather/low_temperature_cold.svg</file>
+        <file alias="weather/mid_rain.svg">icons/weather/mid_rain.svg</file>
+        <file alias="weather/moon_fog.svg">icons/weather/moon_fog.svg</file>
+        <file alias="weather/moon_snow.svg">icons/weather/moon_snow.svg</file>
+        <file alias="weather/moon.svg">icons/weather/moon.svg</file>
+        <file alias="weather/snow.svg">icons/weather/snow.svg</file>
+        <file alias="weather/sun_cloudy.svg">icons/weather/sun_cloudy.svg</file>
+        <file alias="weather/sun_fog.svg">icons/weather/sun_fog.svg</file>
+        <file alias="weather/sun.svg">icons/weather/sun.svg</file>
+        <file alias="weather/wind_storm.svg">icons/weather/wind_storm.svg</file>
+    </qresource>
+    <qresource prefix="/images">
+        <file alias="app.png">images/app.png</file>
+    </qresource>
+    <qresource prefix="/templates">
+        <file alias="appconfig.json">templates/appconfig.json</file>
+    </qresource>
+    <qresource prefix="/style">
+        <file alias="light.qss">style/light.qss</file>
+        <file alias="dark.qss">style/dark.qss</file>
+    </qresource>
+</RCC>

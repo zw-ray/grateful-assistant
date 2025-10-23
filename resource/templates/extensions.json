@@ -1,0 +1,31 @@
+{
+    "extensions": [
+        {
+            "name": "ai",
+            "type": "ext",
+            "path": "ai.ext",
+            "detail" : {
+                "author": "grateassistant",
+                "version": "1.0.0",
+                "description": "AI extensions for more providers and models",
+                "dependencies": [
+                    {
+                        "name": "grateassistant",
+                        "version": "1.0.0"
+                    }
+                ],
+                "license": "MIT",
+                "platform": "x64-windows | x64-linux | x64-mac | arm64-windows | arm64-linux | arm64-mac",
+                "url": "https://github.com/grateassistant/ai.ext",
+                "contact": "https://github.com/grateassistant/ai.ext/issues",
+                "keywords": [
+                    "ai",
+                    "extensions"
+                ],
+                "categories": [
+                    "ai"
+                ]
+            }
+        }
+    ]
+}

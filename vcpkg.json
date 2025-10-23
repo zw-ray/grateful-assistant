@@ -1,0 +1,34 @@
+{
+  "dependencies": [
+    {
+      "name": "cpp-httplib",
+      "features": [
+        "openssl"
+      ]
+    },
+    "fmt",
+    "nlohmann-json",
+    "openssl",
+    {
+      "name": "poco",
+      "features": [
+        "data",
+        "json",
+        "net",
+        "netssl",
+        "sqlite",
+        "util"
+      ]
+    },
+    "portaudio",
+    "spdlog",
+    "sqlite-orm",
+    {
+      "name": "sqlite3",
+      "features": [
+        "json1"
+      ]
+    },
+    "date"
+  ]
+}
