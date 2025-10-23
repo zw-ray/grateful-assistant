@@ -1,0 +1,79 @@
+{
+    "app": {
+        "name": "GratefulAssistant",
+        "system_services": [
+            "audio",
+            "weather",
+            "todo",
+            "sync"
+        ],
+        "plugins": []
+    },
+    "ai": {
+        "providers": [
+            {
+                "name": "SiliconFlow",
+                "base_url": "https://api.siliconflow.cn",
+                "api_key": "",
+                "models": [
+                    {
+                        "name": "FunAudioLLM/SenseVoiceSmall",
+                        "parameters": {
+                            "max_tokens": 4096,
+                            "temperature": 0.5,
+                            "top_p": 0.5,
+                            "top_k": 40,
+                            "repetition_penalty": 1.0,
+                            "enable_thinking": false,
+                            "thinking_budget": 5000,
+                            "enable_streaming": false
+                        },
+                        "roles": [
+                            "chat",
+                            "audio"
+                        ],
+                        "status": "active"
+                    },
+                    {
+                        "name": "deepseek-ai/DeepSeek-R1",
+                        "parameters": {},
+                        "roles": [
+                            "chat"
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Ollama",
+                "baseUrl": "http://localhost:11434/v1",
+                "apiKey": "",
+                "models": []
+            }
+        ],
+        "active_audio_model": "FunAudioLLM/SenseVoiceSmall",
+        "active_text_model": "Qwen/Qwen3-8B",
+        "active_provider": "SiliconFlow",
+        "wake_word": "小竹小竹"
+    },
+    "audio": {
+        "sample_rate": 16000,
+        "sample_width": 2,
+        "channels": 1,
+        "frames_per_buffer": 3200,
+        "vad_frame_duration_ms": 30,
+        "pending_wait_time_ms": 5000,
+        "wake_word_detect": {
+            "wake_word_max_time_ms": 5000,
+            "inactive_audio_max_time_ms": 1000
+        },
+        "content_recognition": {
+            "start_inactive_audio_max_time_ms": 3000,
+            "stop_inactive_audio_max_time_ms": 3000
+        }
+    },
+    "weather": {
+        "amap": {
+            "api_key": ""
+        }
+    }
+}

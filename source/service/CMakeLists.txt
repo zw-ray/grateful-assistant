@@ -1,0 +1,12 @@
+add_subdirectory(audio)
+add_subdirectory(sync)
+add_subdirectory(todo)
+add_subdirectory(weather)
+
+add_subdirectory(file)
+add_subdirectory(game)
+add_subdirectory(music)
+add_subdirectory(novel)
+add_subdirectory(video)
+add_subdirectory(web)
+add_subdirectory(writer)

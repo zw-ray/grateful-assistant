@@ -1,0 +1,311 @@
+/* 全局样式 */
+QMainWindow,
+QDialog,
+QWidget {
+    background-color: #202124;
+    font-family: "Segoe UI", "Microsoft YaHei", sans-serif;
+    font-size: 14px;
+    color: #E8EAED;
+}
+
+/* 卡片样式 */
+QWidget[frameShape="4"],
+.Card {
+    background-color: #2D2E30;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    border: none;
+}
+
+/* 按钮样式 */
+QPushButton {
+    background-color: #4285F4;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: normal;
+    min-height: 20px;
+    min-width: 60px;
+}
+
+QPushButton:hover {
+    background-color: #5294FF;
+}
+
+QPushButton:pressed {
+    background-color: #3367D6;
+}
+
+QPushButton:disabled {
+    background-color: #3C4043;
+    color: #9AA0A6;
+}
+
+/* 主要按钮 */
+QPushButton.primary {
+    background-color: #4285F4;
+}
+
+QPushButton.primary:hover {
+    background-color: #5294FF;
+}
+
+/* 次要按钮 */
+QPushButton.secondary {
+    background-color: #34A853;
+}
+
+QPushButton.secondary:hover {
+    background-color: #3ABA5F;
+}
+
+/* 强调按钮 */
+QPushButton.accent {
+    background-color: #FBBC05;
+    color: #202124;
+}
+
+QPushButton.accent:hover {
+    background-color: #FCD23A;
+}
+
+/* 输入框样式 */
+QLineEdit,
+QTextEdit,
+QPlainTextEdit {
+    background-color: #303134;
+    border: 1px solid #5F6368;
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-size: 14px;
+    color: #E8EAED;
+    selection-background-color: #4285F4;
+}
+
+QLineEdit:focus,
+QTextEdit:focus,
+QPlainTextEdit:focus {
+    border-color: #4285F4;
+    outline: none;
+}
+
+/* 标签样式 */
+QLabel {
+    background: transparent;
+    border: none;
+    font-size: 14px;
+    color: #E8EAED;
+}
+
+QLabel.heading {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+QLabel.subheading {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+QLabel.caption {
+    font-size: 12px;
+    color: #9AA0A6;
+}
+
+/* 组合框样式 */
+QComboBox {
+    background-color: #303134;
+    border: 1px solid #5F6368;
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-size: 14px;
+    color: #E8EAED;
+    min-height: 20px;
+}
+
+QComboBox:focus {
+    border-color: #4285F4;
+}
+
+QComboBox::drop-down {
+    border: none;
+    width: 20px;
+}
+
+QComboBox::down-arrow {
+    image: none;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 5px solid #9AA0A6;
+    width: 0px;
+    height: 0px;
+}
+
+/* 复选框样式 */
+QCheckBox {
+    spacing: 8px;
+    font-size: 14px;
+    color: #E8EAED;
+}
+
+QCheckBox::indicator {
+    width: 16px;
+    height: 16px;
+    border: 1px solid #5F6368;
+    border-radius: 3px;
+    background-color: #303134;
+}
+
+QCheckBox::indicator:checked {
+    background-color: #4285F4;
+    border-color: #4285F4;
+}
+
+QCheckBox::indicator:checked:hover {
+    background-color: #5294FF;
+    border-color: #5294FF;
+}
+
+/* 单选框样式 */
+QRadioButton {
+    spacing: 8px;
+    font-size: 14px;
+    color: #E8EAED;
+}
+
+QRadioButton::indicator {
+    width: 16px;
+    height: 16px;
+    border: 1px solid #5F6368;
+    border-radius: 8px;
+    background-color: #303134;
+}
+
+QRadioButton::indicator:checked {
+    background-color: #4285F4;
+    border-color: #4285F4;
+}
+
+/* 滚动条样式 */
+QScrollBar:vertical {
+    background-color: #202124;
+    width: 12px;
+    margin: 0px;
+}
+
+QScrollBar::handle:vertical {
+    background-color: #5F6368;
+    border-radius: 6px;
+    min-height: 20px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background-color: #7D8186;
+}
+
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical {
+    height: 0px;
+}
+
+/* 进度条样式 */
+QProgressBar {
+    border: none;
+    background-color: #3C4043;
+    border-radius: 4px;
+    text-align: center;
+    color: #E8EAED;
+}
+
+QProgressBar::chunk {
+    background-color: #4285F4;
+    border-radius: 4px;
+}
+
+/* 滑块样式 */
+QSlider::groove:horizontal {
+    background-color: #3C4043;
+    height: 4px;
+    border-radius: 2px;
+}
+
+QSlider::handle:horizontal {
+    background-color: #4285F4;
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    margin: -6px 0;
+}
+
+/* 分组框样式 */
+QGroupBox {
+    font-weight: 500;
+    font-size: 14px;
+    color: #E8EAED;
+    border: 1px solid #5F6368;
+    border-radius: 8px;
+    margin-top: 10px;
+    padding-top: 10px;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    left: 12px;
+    padding: 0 8px;
+}
+
+/* 日期时间卡片的相关样式 */
+#dateLabel {
+    font-size: 16pt;
+    font-weight: bold;
+}
+
+#timeLabel {
+    font-size: 20pt;
+    font-weight: bold;
+}
+
+#weekdayLabel {}
+
+/* 天气卡片的相关样式 */
+#weatherCard {
+    background-color: #2D2E30;
+    border: 1px solid #5F6368;
+    border-radius: 8px;
+    padding: 12px;
+}
+
+#posLabel {
+    font-size: 16pt;
+    font-weight: bold;
+    padding: 4px;
+    margin: 0px;
+}
+
+#tempLabel {
+    font-size: 20pt;
+    font-weight: bold;
+    padding: 4px;
+    margin: 0px;
+}
+
+#weatherLabel {
+    font-size: 10pt;
+    padding: 4px;
+    margin: 0px;
+}
+
+#windLabel {
+    font-size: 10pt;
+    padding: 4px;
+    margin: 0px;
+}
+
+#humidityLabel {
+    font-size: 10pt;
+    padding: 4px;
+    margin: 0px;
+}
