@@ -45,20 +45,6 @@ cmake --build . -j
 ![主界面](docs/待办项主界面.png)
 ![语音输入](docs/语音输入主界面.png)
 
-## 安装说明（npm/yarn/pnpm）
-
-- 所有包管理器脚本均封装 CMake 构建与启动，行为一致。
-- 必需依赖：`Qt6`、`CMake 3.30+`、`C++17` 编译器；可选 `vcpkg`。
-
-脚本说明：
-
-- `configure`：初始化 CMake 构建目录（Release）。
-- `build`：构建项目，输出至 `build/bin/grateassistant`。
-- `start`：启动可执行文件。
-- `clean`：清理构建目录。
-
-详见 `package.json` 与 docs/configuration.md。
-
 ## 基础用法示例
 
 C++ 代码片段（显示主窗口）：
@@ -105,5 +91,6 @@ int main(int argc, char** argv) {
 ## 📄 许可证
 
 MIT License，详见 `LICENSE`。
+
 
 > 文档版本与代码版本同步：v0.1.0（请在发版时同步更新）。
